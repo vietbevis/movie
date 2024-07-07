@@ -16,9 +16,9 @@ export async function generateStaticParams() {
 
   const requests = [
     handleMovies({ page: 1, limit: 50 }),
-    handleMovies({ page: 1, limit: 48, status: "trailer" }),
-    handleMovies({ page: 1, limit: 48, type: "series" }),
-    handleMovies({ page: 1, limit: 48, type: "single" }),
+    handleMovies({ page: 1, limit: 24, status: "trailer" }),
+    handleMovies({ page: 1, limit: 24, type: "series" }),
+    handleMovies({ page: 1, limit: 24, type: "single" }),
   ];
 
   const allResponses = await Promise.all(requests);
