@@ -11,26 +11,26 @@ import Link from "next/link";
 import { Metadata } from "next";
 import { notFound } from "next/navigation";
 
-export async function generateStaticParams() {
-  const paths: { slug: string }[] = [];
+//export async function generateStaticParams() {
+//  const paths: { slug: string }[] = [];
 
-  const requests = [
-    handleMovies({ page: 1, limit: 50 }),
-    handleMovies({ page: 1, limit: 24, status: "trailer" }),
-    handleMovies({ page: 1, limit: 24, type: "series" }),
-    handleMovies({ page: 1, limit: 24, type: "single" }),
-  ];
+//  const requests = [
+//    handleMovies({ page: 1, limit: 50 }),
+//    handleMovies({ page: 1, limit: 24, status: "trailer" }),
+//    handleMovies({ page: 1, limit: 24, type: "series" }),
+//    handleMovies({ page: 1, limit: 24, type: "single" }),
+//  ];
 
-  const allResponses = await Promise.all(requests);
+//  const allResponses = await Promise.all(requests);
 
-  allResponses.forEach((response) => {
-    response.items.forEach((item) => {
-      paths.push({ slug: item.slug });
-    });
-  });
+//  allResponses.forEach((response) => {
+//    response.items.forEach((item) => {
+//      paths.push({ slug: item.slug });
+//    });
+//  });
 
-  return paths;
-}
+//  return paths;
+//}
 
 export async function generateMetadata({
   params,
