@@ -9,9 +9,9 @@ export function cn(...inputs: ClassValue[]) {
 }
 
 export default function checkImage(url: string) {
-  return url?.startsWith("https://apii.online/image/")
+  return url?.startsWith("https://apii.online/storage/images/")
     ? url
-    : `https://apii.online/image/${url}`;
+    : `https://apii.online/storage/images/${url}`;
 }
 
 export async function filterMovies({
